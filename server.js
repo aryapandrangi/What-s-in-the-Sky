@@ -2,7 +2,7 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const API_KEY = '3256d25f4951fc2338b7619447461b2f';
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
